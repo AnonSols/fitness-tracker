@@ -6,7 +6,7 @@ namespace FitnessTrackerApp.Services
 {
     public class WorkoutService
     {
-        private List<Workout> _workouts = new List<Workout>();
+        private readonly List<Workout> _workouts = new();
         public void AddWorkout(string name, int duration)
         {
             var workout = new Workout(name, duration);
