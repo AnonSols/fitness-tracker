@@ -7,7 +7,6 @@ C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\Fitn
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.AssemblyInfoInputs.cache
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.AssemblyInfo.cs
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.csproj.CoreCompileInputs.cache
-C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.sourcelink.json
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.dll
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\refint\FitnessTracker.dll
 C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\obj\Debug\net9.0\FitnessTracker.pdb

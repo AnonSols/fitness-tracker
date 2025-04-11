@@ -38,48 +38,18 @@ public static class ConsoleUIHelper
 
     public static void WorkoutMenu(WorkoutService service)
     {
-        Console.WriteLine("To be implemented after the user logs in");
-        Console.ReadKey();
-    }
+        Console.Clear();
+        Console.WriteLine("Workout Dashboard");
+        Console.WriteLine("1. Log a workout");
+        Console.WriteLine("2. View all workouts");
+        Console.WriteLine("3.Set Calorie Goal");
+        Console.WriteLine("4. Back to Main Menu");
+        Console.Write("Select an Option: ");
 
-    public static void RegisterUser(UserService userService)
-    {
-        Console.Write("Enter username (letters/numbers only): ");
-        string username = Console.ReadLine()!;
-
-        Console.Write("Enter password (12 chars, 1 uppercase, 1 lowercase): ");
-        string password = Console.ReadLine()!;
-
-        if (userService.Register(username, password))
-        {
-            Console.WriteLine("Registration Successful! Press any key to continue.");
-        }
-        else
-        {
-            Console.WriteLine("Invalid username/password format. Follow the rules: ");
-            Console.WriteLine("- Username: Letters/numbers only");
-            Console.WriteLine("- Password: 12 chars, 1 uppercase, 1 lowercase");
-        }
-
-        Console.ReadKey();
+        string choice = Console.ReadLine()!;
 
 
     }
 
-    public static void LoginUser(UserService userService)
-    {
-        Console.Write("Username: ");
-        string username = Console.ReadLine()!;
 
-        Console.Write("Password: ");
-        string password = Console.ReadLine()!;
-
-        if (userService.Login(username, password))
-        {
-            Console.WriteLine("Login successful! Press any key to continue.");
-
-            Console.ReadKey();
-            WorkoutMenu()
-        }
-    }
 }
