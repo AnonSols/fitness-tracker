@@ -1,3 +1,5 @@
+using FitnessTrackerApp.Services;
+
 namespace FitnessTrackerApp.Helpers;
 
 public static class ValidationHelper
@@ -7,4 +9,5 @@ public static class ValidationHelper
     public static bool IsPositiveNumber(int value) => value > 0;
 
     public static bool IsValidPassword(string password) => password.Length == 12 && password.Any(char.IsUpper) && password.Any(char.IsLower);
+
 }

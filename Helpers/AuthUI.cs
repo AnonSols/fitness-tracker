@@ -13,16 +13,7 @@ public static class AuthUI
         Console.Write("Enter password (12 chars, 1 uppercase, 1 lowercase): ");
         string password = Console.ReadLine()!;
 
-        // if (userService.Register(username, password))
-        // {
-        //     Console.WriteLine("Registration Successful! Press any key to continue.");
-        // }
-        // else
-        // {
-        //     Console.WriteLine("Invalid username/password format. Follow the rules: ");
-        //     Console.WriteLine("- Username: Letters/numbers only");
-        //     Console.WriteLine("- Password: 12 chars, 1 uppercase, 1 lowercase");
-        // }
+
 
         if (!ValidationHelper.IsValidateUserName(username))
         {
@@ -36,10 +27,12 @@ public static class AuthUI
             Console.WriteLine("Invalid username/password format. Follow the rules: ");
             Console.WriteLine("- Username: Letters/numbers only");
             Console.WriteLine("- Password: 12 chars, 1 uppercase, 1 lowercase");
+            Console.ReadKey();
+            return;
         }
-        Console.ReadKey();
 
-
+        if (userService.Register(username, password)) Console.WriteLine("Registration successful!");
+        else Console.WriteLine("username already exists.");
     }
 
     public static bool LoginUser(UserService userService)

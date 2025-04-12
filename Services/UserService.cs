@@ -22,7 +22,6 @@ public class UserService
     public bool Login(string username, string password)
     {
         var user = _users.FirstOrDefault(u => u.Username == username && u.Password == password);
-
         return user != null;
     }
 }

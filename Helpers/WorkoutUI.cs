@@ -25,6 +25,8 @@ private static void LogWorkout(WorkoutService service)
         Console.WriteLine("Select Activity Type: ");
         Console.WriteLine("1. Walking");
         Console.WriteLine("2. Swimming");
+        Console.WriteLine("3. Running");
+        Console.WriteLine("4. Cycling");
         Console.Write("Enter activity number: ");
 
         if (int.TryParse(Console.ReadLine(), out int activityType))
@@ -35,4 +37,16 @@ private static void LogWorkout(WorkoutService service)
 
             }
         }
+    }
+
+    private static void LogWalkingWorkout(WorkoutService service)
+    {
+        Console.Write("Enter steps: ");
+        int steps = int.Parse(Console.ReadLine()!);
+        Console.Write("Enter duration (km): ");
+        double distance = double.Parse(Console.ReadLine()!);
+        Console.Write("Enter duration  (minutes): ");
+        int duration = int.Parse(Console.ReadLine()!);
+
+        service.LogActivity()
     }

@@ -7,6 +7,9 @@ namespace FitnessTrackerApp.Services
     public class WorkoutService
     {
         private readonly List<Workout> _workouts = new();
+        private readonly List<Activity> _activities = new();
+        private int _calorieGoal;
+
         public void AddWorkout(string name, int duration)
         {
             var workout = new Workout(name, duration);
@@ -28,6 +31,13 @@ namespace FitnessTrackerApp.Services
                 Console.WriteLine($"{workout.Date.ToShortDateString()} - {workout.WorkoutName} for {workout.DurationInMinutes} minutes");
             }
             Console.WriteLine("\n");
+        }
+
+        // Logs out our activities
+        public void LogActivity(Activity activity)
+        {
+            _activities.Add(activity);
+            Console.WriteLine($"Logged {activity.Name} ({activity.CalculateCaloriesBurned()} kcal)");
         }
     }
 }
