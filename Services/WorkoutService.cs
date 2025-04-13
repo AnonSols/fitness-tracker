@@ -39,5 +39,26 @@ namespace FitnessTrackerApp.Services
             _activities.Add(activity);
             Console.WriteLine($"Logged {activity.Name} ({activity.CalculateCaloriesBurned()} kcal)");
         }
+
+        // All logged workouts
+        public void ListWorkouts()
+        {
+            if (_activities.Count == 0)
+            {
+                Console.WriteLine("No workouts Logged yet.");
+                return;
+            }
+
+            foreach (var activity in _activities)
+            {
+                Console.WriteLine($"{activity.Date:g} - {activity.Name} - {activity.CalculateCaloriesBurned()} kcal burned");
+            }
+        }
+
+        // sets my user's calories goal
+        public void SetCalorieGoal(int goal) => _calorieGoal = goal;
+
+        // calculates the total calories burned
+        public double GetTotalCaloriesBurned() => _activities.Sum(a => a.CalculateCaloriesBurned());
     }
 }
