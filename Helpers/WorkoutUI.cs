@@ -1,4 +1,6 @@
 namespace FitnessTrackerApp.Helpers;
+
+using FitnessTrackerApp.Model.Activities;
 using FitnessTrackerApp.Services;
 public static class WorkoutUI
 {
@@ -18,9 +20,8 @@ public static class WorkoutUI
 
         }
     }
-}
 
-private static void LogWorkout(WorkoutService service)
+    private static void LogWorkout(WorkoutService service)
     {
         Console.WriteLine("Select Activity Type: ");
         Console.WriteLine("1. Walking");
@@ -29,14 +30,14 @@ private static void LogWorkout(WorkoutService service)
         Console.WriteLine("4. Cycling");
         Console.Write("Enter activity number: ");
 
-        if (int.TryParse(Console.ReadLine(), out int activityType))
-        {
-            switch (activityType)
-            {
+        // if (int.TryParse(Console.ReadLine(), out int activityType))
+        // {
+        //     switch (activityType)
+        //     {
 
 
-            }
-        }
+        //     }
+        // }
     }
 
     private static void LogWalkingWorkout(WorkoutService service)
@@ -48,5 +49,54 @@ private static void LogWorkout(WorkoutService service)
         Console.Write("Enter duration  (minutes): ");
         int duration = int.Parse(Console.ReadLine()!);
 
-        service.LogActivity()
+        service.LogActivity(new Walking
+        {
+            Steps = steps,
+            DistanceKm = distance,
+            DurationMinutes = duration
+        });
+
+        Console.WriteLine("Walking workout logged successfully!");
+        Console.ReadKey();
     }
+
+
+    private static void LogSwimmingWorkout(WorkoutService service)
+    {
+        Console.Write("Enter laps: ");
+        int laps = int.Parse(Console.ReadLine()!);
+        Console.Write("Enter duration (minutes): ");
+        int duration = int.Parse(Console.ReadLine()!);
+        Console.Write("Enter aveg heart rate: ");
+        int heartRate = int.Parse(Console.ReadLine()!);
+
+        service.LogActivity(new Swimming
+        {
+            Laps = laps,
+            DurationMinutes = duration,
+            AvgHeartRate = heartRate
+        });
+
+        Console.WriteLine("Swimming workout logged successfully!");
+        Console.ReadKey();
+    }
+
+
+    private static void SetCalorieGoal(WorkoutService service)
+    {
+        Console.Write("Enter dsaily calorie goal: ");
+        if (int.TryParse(Console.ReadLine(), out int goal))
+        {
+            service.SetCalorieGoal(goal);
+            Console.WriteLine($"Goal set to {goal} kcal!");
+        }
+        else
+        {
+            MenuUI.ShowError("Invalid Input");
+        }
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
+
+}
+

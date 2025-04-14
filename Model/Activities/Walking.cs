@@ -6,6 +6,6 @@ public class Walking : Activity
     public double DistanceKm { get; set; }
     public int DurationMinutes { get; set; }
 
-    public override double CalculateCaloriesBurned() => Steps * 0.04
+    public override double CalculateCaloriesBurned() => Steps * 0.04;
 }
 
