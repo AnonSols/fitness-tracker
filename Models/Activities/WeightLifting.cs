@@ -1,8 +1,9 @@
 namespace FitnessTrackerApp.Models.Activities;
+using FitnessTrackerApp.Models;
 
 public class Weightlifting : Activity
 {
-    public string Exercise { get; set; }  // e.g., "Deadlift", "Bench Press"
+    public string? Exercise { get; set; }  // e.g., "Deadlift", "Bench Press"
     public int Sets { get; set; }
     public int Reps { get; set; }
     public double WeightKg { get; set; }

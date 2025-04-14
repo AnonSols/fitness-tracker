@@ -1,4 +1,4 @@
-using FitnessTrackerApp.Models;
+namespace FitnessTrackerApp.Models;
 
 public abstract class Activity
 {

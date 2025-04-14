@@ -1,8 +1,7 @@
 namespace FitnessTrackerApp.Helpers;
 
-using FitnessTrackerApp.Model.Activities;
+using FitnessTrackerApp.Models.Activities;
 using FitnessTrackerApp.Services;
-using FitnessTrackerApp.Model;
 public static class WorkoutUI
 {
     public static void WorkoutMenu(WorkoutService service)
