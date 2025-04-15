@@ -1,5 +1,4 @@
 using FitnessTrackerApp.Services;
-using FitnessTrackerApp.Helpers;
 
 namespace FitnessTrackerApp.Helpers;
 

@@ -1,4 +1,4 @@
-namespace FitnessTrackerApp.Model.Activities;
+namespace FitnessTrackerApp.Models.Activities;
 using FitnessTrackerApp.Models;
 
 public class Swimming : Activity
