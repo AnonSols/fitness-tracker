@@ -52,12 +52,10 @@ public static class WorkoutHelpers
     }
     public static void LogWalkingWorkout(WorkoutService service)
     {
-        Console.Write("Enter steps: ");
-        int steps = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter duration (km): ");
-        double distance = double.Parse(Console.ReadLine()!);
-        Console.Write("Enter duration  (minutes): ");
-        int duration = int.Parse(Console.ReadLine()!);
+
+        if (!ValidationHelper.TryReadPositiveInt("Enter steps: ", out int steps)) return;
+        if (!ValidationHelper.TryReadPositiveDouble("Enter duration (km): ", out double distance)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter duration (minutes):  ", out int duration)) return;
 
         service.LogActivity(new Walking
         {
@@ -72,12 +70,10 @@ public static class WorkoutHelpers
 
     public static void LogSwimmingWorkout(WorkoutService service)
     {
-        Console.Write("Enter laps: ");
-        int laps = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter duration (minutes): ");
-        int duration = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter aveg heart rate: ");
-        int heartRate = int.Parse(Console.ReadLine()!);
+
+        if (!ValidationHelper.TryReadPositiveInt("Enter laps: ", out int laps)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter duration (minutes): ", out int duration)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter average heart rate: ", out int heartRate)) return;
 
         service.LogActivity(new Swimming
         {
@@ -109,12 +105,9 @@ public static class WorkoutHelpers
     }
     public static void LogRunningWorkout(WorkoutService service)
     {
-        Console.Write("Enter distance (km): ");
-        double distance = double.Parse(Console.ReadLine()!);
-        Console.Write("Enter duration (minutes): ");
-        int duration = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter aveg heart rate: ");
-        int elevation = int.Parse(Console.ReadLine()!);
+        if (!ValidationHelper.TryReadPositiveDouble("Enter distance (km): ", out double distance)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter duration (minutes): ", out int duration)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter aveg heart rate: ", out int elevation)) return;
 
         service.LogActivity(new Running
         {
@@ -129,10 +122,10 @@ public static class WorkoutHelpers
 
     public static void LogYogaWorkout(WorkoutService service)
     {
-        Console.Write("Enter duration (minutes): ");
-        string style = Console.ReadLine()!;
-        Console.Write("Enter aveg heart rate: ");
-        int duration = int.Parse(Console.ReadLine()!);
+        // Console.Write("Enter duration (minutes): ");
+        // string style = Console.ReadLine()!;
+        // Console.Write("Enter aveg heart rate: ");
+        // int duration = int.Parse(Console.ReadLine()!);
 
         service.LogActivity(new Yoga
         {
