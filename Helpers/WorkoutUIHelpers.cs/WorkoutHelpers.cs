@@ -122,10 +122,10 @@ public static class WorkoutHelpers
 
     public static void LogYogaWorkout(WorkoutService service)
     {
-        // Console.Write("Enter duration (minutes): ");
-        // string style = Console.ReadLine()!;
-        // Console.Write("Enter aveg heart rate: ");
-        // int duration = int.Parse(Console.ReadLine()!);
+        Console.Write("Enter yoga style: ");
+        string style = Console.ReadLine()!;
+
+        if (!ValidationHelper.TryReadPositiveInt("Enter duration (minutes): ", out int duration)) return;
 
         service.LogActivity(new Yoga
         {
@@ -139,14 +139,21 @@ public static class WorkoutHelpers
 
     public static void LogWeightliftingWorkout(WorkoutService service)
     {
+        // Console.Write("Enter exercise name: ");
+        // string exercise = Console.ReadLine()!;
+        // Console.Write("Enter sets: ");
+        // int sets = int.Parse(Console.ReadLine()!);
+        // Console.Write("Enter reps: ");
+        // int reps = int.Parse(Console.ReadLine()!);
+        // Console.Write("Enter weight (kg): ");
+        // double weight = double.Parse(Console.ReadLine()!);
+
         Console.Write("Enter exercise name: ");
         string exercise = Console.ReadLine()!;
-        Console.Write("Enter sets: ");
-        int sets = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter reps: ");
-        int reps = int.Parse(Console.ReadLine()!);
-        Console.Write("Enter weight (kg): ");
-        double weight = double.Parse(Console.ReadLine()!);
+
+        if (!ValidationHelper.TryReadPositiveInt("Enter sets: ", out int sets)) return;
+        if (!ValidationHelper.TryReadPositiveInt("Enter reps: ", out int reps)) return;
+        if (!ValidationHelper.TryReadPositiveDouble("Enter weight  (kg): ", out double weight)) return;
 
         service.LogActivity(new Weightlifting
         {
