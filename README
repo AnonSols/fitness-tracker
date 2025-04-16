@@ -1,0 +1,76 @@
+# Fitness Tracker App
+
+**NCC Education Assignment** | [![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/) [![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+
+A GUI-based fitness tracker application built with C# and WPF, fulfilling the NCC Education assignment requirements for _Designing and Developing Object-Oriented Computer Programs_.
+
+---
+
+## 📌 Features
+
+✅ **User Authentication**
+
+- Registration with username (alphanumeric) and password (12 chars, 1 uppercase, 1 lowercase).
+- Login with attempt handling.
+
+✅ **Activity Tracking**
+
+- Log 6 activity types:
+  - 🚶 Walking (steps, distance)
+  - 🏊 Swimming (laps, heart rate)
+  - 🏃 Running (distance, elevation)
+  - 🚴 Cycling (distance, speed)
+  - 🧘 Yoga (duration, style)
+  - 💪 Weightlifting (sets, reps)
+
+✅ **Goal Monitoring**
+
+- Set daily calorie goals.
+- Track progress with real-time calculations.
+
+✅ **Validation**
+
+- Reject invalid inputs (negative numbers, incorrect formats).
+
+---
+
+## 🛠️ Technical Stack
+
+- **Language**: C#
+- **Framework**: .NET 6+
+- **GUI**: WPF (MVVM pattern)
+- **Backend**: OOP principles (encapsulation, inheritance, polymorphism)
+
+---
+
+## 📂 Project Structure
+
+FitnessTrackerApp/
+├── Models/ # Data structures
+│ ├── Activity.cs # Base class
+│ └── Activities/ # Walking, Swimming, etc.
+├── Services/ # Business logic
+│ ├── UserService.cs # Authentication
+│ └── WorkoutService.cs # Activity logging
+├── Helpers/ # Utilities
+│ ├── ValidationHelper.cs
+│ └── WorkoutHelpers/ # Activity-specific logic
+├── GUI/ # WPF project (to be implemented)
+└── README.md # This file
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [.NET 6 SDK](https://dotnet.microsoft.com/download)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) (or VS Code with C# extension)
+
+### Running the Console MVP
+
+```bash
+git clone https://github.com/anonsols/fitness-tracker.git
+cd fitness-tracker/FitnessTrackerApp
+dotnet run
+```

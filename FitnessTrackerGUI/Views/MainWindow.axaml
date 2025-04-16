@@ -1,0 +1,12 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.MainWindow" x:DataType="vm:MainWindowViewModel" Title="Fitness Tracker" MinWidth="350" MinHeight="450"><!-- Design-time ViewModel (for IDE preview only) -->
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext><!-- Modern login UI -->
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20"><!-- App title -->
+        <TextBlock Text="Fitness Tracker" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,20"/><!-- Username input -->
+        <TextBox Watermark="Username" Width="250" Text="{Binding Username}"/><!-- Password input -->
+        <TextBox Watermark="Password" Width="250" PasswordChar="•" Text="{Binding Password}"/><!-- Login button -->
+        <Button Content="Login" Width="250" Command="{Binding LoginCommand}" Classes="accent"/><!-- Error message -->
+        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" HorizontalAlignment="Center"/>
+    </StackPanel>
+</Window>
