@@ -62,3 +62,10 @@ namespace FitnessTrackerApp.Services
         public double GetTotalCaloriesBurned() => _activities.Sum(a => a.CalculateCaloriesBurned());
     }
 }
+
+
+
+
+
+
+

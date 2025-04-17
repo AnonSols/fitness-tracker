@@ -1,0 +1,8 @@
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.csproj.AssemblyReference.cache
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\Avalonia\Resources.Inputs.cache
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\Avalonia\resources
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.AssemblyInfoInputs.cache
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.AssemblyInfo.cs
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.csproj.CoreCompileInputs.cache
+C:\Users\egede\Desktop\jobs\fitness-tracker\FitnessTracker\FitnessTrackerGUI\obj\Debug\net9.0\FitnessTrackerGUI.sourcelink.json
