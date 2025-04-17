@@ -1,20 +1,39 @@
 {
   "version": 2,
-  "dgSpecHash": "XkqQRfkHzac=",
-  "success": false,
-  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness-tracker\\FitnessTracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Error",
-      "message": "Failed to download package 'Avalonia.11.2.7' from 'https://api.nuget.org/v3-flatcontainer/avalonia/11.2.7/avalonia.11.2.7.nupkg'.\r\nNo such host is known. (api.nuget.org:443)\r\n  No such host is known."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Avalonia' from remote source 'https://api.nuget.org/v3-flatcontainer/avalonia/index.json'.\r\n  No such host is known. (api.nuget.org:443)\r\n  No such host is known.",
-      "libraryId": "Avalonia"
-    }
-  ]
+  "dgSpecHash": "KztNVbkq+KM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia\\11.2.7\\avalonia.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.buildservices\\0.0.31\\avalonia.buildservices.0.0.31.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.controls.colorpicker\\11.2.7\\avalonia.controls.colorpicker.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.controls.datagrid\\11.2.7\\avalonia.controls.datagrid.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.desktop\\11.2.7\\avalonia.desktop.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.diagnostics\\11.2.7\\avalonia.diagnostics.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.fonts.inter\\11.2.7\\avalonia.fonts.inter.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.freedesktop\\11.2.7\\avalonia.freedesktop.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.native\\11.2.7\\avalonia.native.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.remote.protocol\\11.2.7\\avalonia.remote.protocol.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.skia\\11.2.7\\avalonia.skia.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.themes.fluent\\11.2.7\\avalonia.themes.fluent.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.themes.simple\\11.2.7\\avalonia.themes.simple.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.win32\\11.2.7\\avalonia.win32.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\avalonia.x11\\11.2.7\\avalonia.x11.11.2.7.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp\\7.3.0.3\\harfbuzzsharp.7.3.0.3.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\7.3.0.3\\harfbuzzsharp.nativeassets.linux.7.3.0.3.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.3\\harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\7.3.0.3\\harfbuzzsharp.nativeassets.webassembly.7.3.0.3.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0.3\\harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\skiasharp\\2.88.9\\skiasharp.2.88.9.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.9\\skiasharp.nativeassets.linux.2.88.9.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.9\\skiasharp.nativeassets.macos.2.88.9.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\2.88.9\\skiasharp.nativeassets.webassembly.2.88.9.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.9\\skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\tmds.dbus.protocol\\0.20.0\\tmds.dbus.protocol.0.20.0.nupkg.sha512"
+  ],
+  "logs": []
 }

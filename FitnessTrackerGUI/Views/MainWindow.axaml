@@ -1,12 +1,20 @@
-<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.MainWindow" x:DataType="vm:MainWindowViewModel" Title="Fitness Tracker" MinWidth="350" MinHeight="450"><!-- Design-time ViewModel (for IDE preview only) -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:FitnessTrackerGUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FitnessTrackerGUI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="FitnessTrackerGUI">
+
     <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
-    </Design.DataContext><!-- Modern login UI -->
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20"><!-- App title -->
-        <TextBlock Text="Fitness Tracker" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,20"/><!-- Username input -->
-        <TextBox Watermark="Username" Width="250" Text="{Binding Username}"/><!-- Password input -->
-        <TextBox Watermark="Password" Width="250" PasswordChar="•" Text="{Binding Password}"/><!-- Login button -->
-        <Button Content="Login" Width="250" Command="{Binding LoginCommand}" Classes="accent"/><!-- Error message -->
-        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" HorizontalAlignment="Center"/>
-    </StackPanel>
+    </Design.DataContext>
+
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
 </Window>
