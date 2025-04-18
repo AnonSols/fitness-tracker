@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KztNVbkq+KM=",
+  "dgSpecHash": "TaUQ84SbcLw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\egede\\.nuget\\packages\\avalonia\\11.2.7\\avalonia.11.2.7.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
@@ -20,7 +20,7 @@
     "C:\\Users\\egede\\.nuget\\packages\\avalonia.themes.simple\\11.2.7\\avalonia.themes.simple.11.2.7.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\avalonia.win32\\11.2.7\\avalonia.win32.11.2.7.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\avalonia.x11\\11.2.7\\avalonia.x11.11.2.7.nupkg.sha512",
-    "C:\\Users\\egede\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\egede\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp\\7.3.0.3\\harfbuzzsharp.7.3.0.3.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\7.3.0.3\\harfbuzzsharp.nativeassets.linux.7.3.0.3.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.3\\harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",

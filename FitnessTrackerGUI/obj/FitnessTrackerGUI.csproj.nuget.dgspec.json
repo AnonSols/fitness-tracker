@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj": {}
+    "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj": {
+    "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+        "projectUniqueName": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
         "projectName": "FitnessTrackerGUI",
-        "projectPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+        "projectPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
         "packagesPath": "C:\\Users\\egede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\obj\\",
+        "outputPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\egede\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -66,7 +66,7 @@
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.4.0, )"
             }
           },
           "imports": [
