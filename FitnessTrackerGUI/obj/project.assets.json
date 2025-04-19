@@ -1490,24 +1490,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\egede\\.nuget\\packages\\": {}
+    "C:\\Users\\egede\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+      "projectUniqueName": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
       "projectName": "FitnessTrackerGUI",
-      "projectPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+      "projectPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
       "packagesPath": "C:\\Users\\egede\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\obj\\",
+      "outputPath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\egede\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\egede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1573,7 +1580,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,12 +1,13 @@
 using Avalonia.Controls;
 using FitnessTrackerGUI.ViewModels;
+
 namespace FitnessTrackerGUI.Views;
 
-public partial class MainWindow : Window
+public partial class RegisterView : UserControl
 {
-    public MainWindow()
+    public RegisterView()
     {
         InitializeComponent();
-        DataContext = new MainWindowViewModel();
+        DataContext = new ViewModels.RegisterViewModel();
     }
 }

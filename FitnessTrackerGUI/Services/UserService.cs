@@ -1,27 +1,26 @@
-using FitnessTrackerGUI.Models;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace FitnessTrackerGUI.Services;
+using System.Collections.Generic;
 
-public class UserService
+public static class UserService
 {
-    private readonly List<User> _users = new();
-
-    public bool Register(string username, string password)
+    // Simulated in-memory store: like a mini database in RAM
+    private static Dictionary<string, string> _users = new()
     {
-        if (!username.All(char.IsLetterOrDigit)) return false;
+        { "solomon", "Solomon123!" },
+        { "omolara", "Password123!" }
+    };
 
-        if (password.Length != 12 || !password.Any(char.IsUpper) ||
-        !password.Any(char.IsLower)) return false;
-
-        _users.Add(new User { Username = username, Password = password });
-        return true;
+    public static bool Authenticate(string username, string password)
+    {
+        return _users.TryGetValue(username, out var storedPassword)
+            && storedPassword == password;
     }
 
-    public bool Login(string username, string password)
+    public static void Register(string username, string password)
     {
-        var user = _users.FirstOrDefault(u => u.Username == username && u.Password == password);
-        return user != null;
+        if (!_users.ContainsKey(username))
+            _users.Add(username, password);
     }
+
+    public static bool UserExists(string username) => _users.ContainsKey(username);
 }

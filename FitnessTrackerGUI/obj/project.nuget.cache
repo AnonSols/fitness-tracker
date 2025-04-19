@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TaUQ84SbcLw=",
+  "dgSpecHash": "zLDwi52hEPg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
+  "projectFilePath": "C:\\Users\\egede\\Desktop\\jobs\\fitness_tracker_gui\\fitness-tracker\\FitnessTrackerGUI\\FitnessTrackerGUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\egede\\.nuget\\packages\\avalonia\\11.2.7\\avalonia.11.2.7.nupkg.sha512",
     "C:\\Users\\egede\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

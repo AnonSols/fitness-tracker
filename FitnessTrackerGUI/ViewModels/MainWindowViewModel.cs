@@ -1,6 +1,17 @@
-﻿namespace FitnessTrackerGUI.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Avalonia.Controls;
+using FitnessTrackerGUI.Views;
 
-public partial class MainWindowViewModel : ViewModelBase
+namespace FitnessTrackerGUI.ViewModels
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+    public partial class MainWindowViewModel : ObservableObject
+    {
+        [ObservableProperty]
+        private object currentView;
+
+        public MainWindowViewModel()
+        {
+            CurrentView = new LoginView();
+        }
+    }
 }

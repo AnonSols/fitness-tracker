@@ -10,6 +10,32 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme />
+  <FluentTheme /> <!-- Defaults to System theme -->
+        <Style Selector="Button.Primary">
+            <Setter Property="Background" Value="#3B82F6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="15,5"/>
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+    <!-- Modern TextBox Style -->
+<Style Selector="TextBox.ModernInput">
+    <Setter Property="Background" Value="#FFFFFF20"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Padding" Value="12"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="CaretBrush" Value="White"/>
+    <Style.Resources>
+        <SolidColorBrush x:Key="TextBoxWatermarkForeground">#AAAAAA</SolidColorBrush>
+    </Style.Resources>
+</Style>
+
+<!-- Text Button Style -->
+<Style Selector="Button.TextButton">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="#BFDBFE"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="FontWeight" Value="SemiBold"/>
+</Style>
     </Application.Styles>
 </Application>

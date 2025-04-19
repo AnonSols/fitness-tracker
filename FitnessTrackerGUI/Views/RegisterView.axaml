@@ -1,0 +1,10 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.RegisterView" x:DataType="vm:RegisterViewModel">
+    <StackPanel Spacing="15" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="Register" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <TextBox Watermark="Username" Text="{Binding Username}" Width="250"/>
+        <TextBox Watermark="Password" PasswordChar="●" Text="{Binding Password}" Width="250"/>
+        <TextBox Watermark="Confirm Password" PasswordChar="●" Text="{Binding ConfirmPassword}" Width="250"/>
+        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" HorizontalAlignment="Center"/>
+        <Button Content="Register" Command="{Binding RegisterCommand}" Width="250"/>
+    </StackPanel>
+</UserControl>
