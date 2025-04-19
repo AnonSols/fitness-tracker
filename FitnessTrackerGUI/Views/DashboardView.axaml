@@ -1,14 +1,31 @@
-<UserControl
-    xmlns="https://github.com/avaloniaui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels"
-    x:Class="FitnessTrackerGUI.Views.DashboardView"
-    x:DataType="vm:DashboardViewModel">
-
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
-        <TextBlock Text="{Binding WelcomeMessage}" FontSize="24" HorizontalAlignment="Center" />
-        
-        <Button Content="Log Activity" Command="{Binding GoToActivityCommand}" Width="200" />
-        <Button Content="Logout" Command="{Binding LogoutCommand}" Width="200" />
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.DashboardView" x:DataType="vm:DashboardViewModel">
+    <StackPanel Spacing="20" Margin="30">
+        <TextBlock Text="{Binding WelcomeMessage}" FontSize="24" FontWeight="Bold" Foreground="#1E3A8A"/>
+        <Border Background="#F3F4F6" CornerRadius="10" Padding="15">
+            <StackPanel>
+                <TextBlock Text="Today&apos;s Goal" FontSize="16" FontWeight="Bold"/>
+                <TextBlock Text="{Binding DailyCalorieGoal}" FontSize="22" Foreground="#10B981"/>
+            </StackPanel>
+        </Border>
+        <Border Background="#F9FAFB" CornerRadius="10" Padding="15">
+            <StackPanel>
+                <TextBlock Text="Calories Burned" FontSize="16" FontWeight="Bold"/>
+                <TextBlock Text="{Binding CaloriesBurned}" FontSize="22" Foreground="#EF4444"/>
+            </StackPanel>
+        </Border>
+        <TextBlock Text="Recent Activities" FontSize="18" Margin="0,10,0,5"/>
+        <ItemsControl ItemsSource="{Binding RecentActivities}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,4" Background="#E5E7EB" CornerRadius="5" Padding="8">
+                        <TextBlock Text="{Binding}"/>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="Log Activity" Command="{Binding GoToActivityCommand}" Width="140" Classes="Primary"/>
+            <Button Content="Logout" Command="{Binding LogoutCommand}" Width="140" Classes="TextButton"/>
+        </StackPanel>
     </StackPanel>
 </UserControl>

@@ -1,12 +1,15 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using FitnessTrackerGUI.Views;
+using FitnessTrackerGUI.Models; // NEW: For ActivityLog model
+using FitnessTrackerGUI.Services; // NEW: For AnalyticsService
+using System;
 
 namespace FitnessTrackerGUI.ViewModels;
 
 public partial class ActivityViewModel : ObservableObject
 {
-
     public ActivityViewModel()
     {
         SelectedActivityType = string.Empty;
@@ -16,7 +19,7 @@ public partial class ActivityViewModel : ObservableObject
         ElevationGain = string.Empty;
         CaloriesText = "Calories: -";
 
-        UpdateInputs(); // this guy just Ensures our input visibility is updated at the start
+        UpdateInputs();
     }
 
     public ObservableCollection<string> ActivityTypes { get; } = new()
@@ -31,18 +34,16 @@ public partial class ActivityViewModel : ObservableObject
     [ObservableProperty] private string elevationGain = string.Empty;
     [ObservableProperty] private string caloriesText = "Calories: -";
 
-    public ObservableCollection<string> LoggedActivities { get; } = new();
+    // NEW: Proper log collection for analytics
+    public ObservableCollection<ActivityLog> ActivityLogs { get; } = new();
 
-    partial void OnSelectedActivityTypeChanged(string value)
-    {
-        UpdateInputs();
-    }
+    partial void OnSelectedActivityTypeChanged(string value) => UpdateInputs();
 
     private void UpdateInputs()
     {
         ShowSteps = SelectedActivityType == "Walking";
         ShowDistance = SelectedActivityType is "Running" or "Cycling";
-        ShowDuration = SelectedActivityType != "Yoga"; // all but yoga
+        ShowDuration = SelectedActivityType != "Yoga";
         ShowElevation = SelectedActivityType == "Running";
     }
 
@@ -56,7 +57,31 @@ public partial class ActivityViewModel : ObservableObject
     {
         double calories = CalculateCalories();
         CaloriesText = $"Calories: {calories:F1}";
-        LoggedActivities.Add($"{SelectedActivityType}: {calories:F1} kcal burned");
+        double.TryParse(Steps, out double s);
+        double.TryParse(DistanceKm, out double d);
+        double.TryParse(DurationMinutes, out double t);
+        double.TryParse(ElevationGain, out double e);
+        var log = new ActivityLog
+        {
+            ActivityType = SelectedActivityType,
+            Steps = s,
+            DistanceKm = d,
+            DurationMinutes = t,
+            ElevationGain = e,
+            CaloriesBurned = calories,
+            Timestamp = DateTime.Now
+        };
+
+
+
+        ActivityLogs.Add(log);
+        AnalyticsService.AddLog(log); // Save to analytics
+    }
+
+    [RelayCommand]
+    private void BackToDashboard()
+    {
+        App.MainViewModel.CurrentView = new DashboardView();
     }
 
     private double CalculateCalories()

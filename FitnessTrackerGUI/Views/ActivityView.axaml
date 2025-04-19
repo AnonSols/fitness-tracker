@@ -11,11 +11,14 @@
             <TextBox Watermark="Elevation Gain (m)" Text="{Binding ElevationGain}" IsVisible="{Binding ShowElevation}"/><!-- Calories -->
             <TextBlock Text="{Binding CaloriesText}" FontWeight="Bold"/><!-- Save Button -->
             <Button Content="Log Activity" Command="{Binding LogActivityCommand}" Classes="Primary"/><!-- Activity Log -->
+            <StackPanel><!-- Your other buttons -->
+                <Button Content="Back to Dashboard" Command="{Binding BackToDashboardCommand}" Classes="Primary" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+            </StackPanel>
             <TextBlock Text="Activity History:" FontWeight="Bold" Margin="0,20,0,0"/>
-            <ItemsControl ItemsSource="{Binding LoggedActivities}">
+            <ItemsControl ItemsSource="{Binding ActivityLogs}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}"/>
+                        <TextBlock Text="{Binding}" Foreground="White" Margin="5"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
