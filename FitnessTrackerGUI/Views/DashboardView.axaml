@@ -1,0 +1,14 @@
+<UserControl
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels"
+    x:Class="FitnessTrackerGUI.Views.DashboardView"
+    x:DataType="vm:DashboardViewModel">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+        <TextBlock Text="{Binding WelcomeMessage}" FontSize="24" HorizontalAlignment="Center" />
+        
+        <Button Content="Log Activity" Command="{Binding GoToActivityCommand}" Width="200" />
+        <Button Content="Logout" Command="{Binding LogoutCommand}" Width="200" />
+    </StackPanel>
+</UserControl>

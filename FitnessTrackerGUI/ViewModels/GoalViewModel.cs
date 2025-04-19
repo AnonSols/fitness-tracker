@@ -24,7 +24,7 @@ public partial class GoalViewModel : ObservableObject
         }
 
         FeedbackMessage = $"Goal saved: {CalorieGoal} kcal, {StepsGoal} steps.";
-        App.MainViewModel.CurrentView = new ActivityView();
+        App.MainViewModel.CurrentView = new DashboardView();
 
         // Later: store in a service or model if needed
     }
