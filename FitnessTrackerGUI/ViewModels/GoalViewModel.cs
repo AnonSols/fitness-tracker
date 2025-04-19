@@ -1,6 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
+using FitnessTrackerGUI.Views;
 namespace FitnessTrackerGUI.ViewModels;
 
 public partial class GoalViewModel : ObservableObject
@@ -24,6 +24,8 @@ public partial class GoalViewModel : ObservableObject
         }
 
         FeedbackMessage = $"Goal saved: {CalorieGoal} kcal, {StepsGoal} steps.";
+        App.MainViewModel.CurrentView = new ActivityView();
+
         // Later: store in a service or model if needed
     }
 }

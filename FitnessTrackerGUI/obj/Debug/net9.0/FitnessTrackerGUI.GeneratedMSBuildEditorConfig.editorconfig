@@ -29,6 +29,9 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/egede/Desktop/jobs/fitness_tracker_gui/fitness-tracker/FitnessTrackerGUI/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/egede/Desktop/jobs/fitness_tracker_gui/fitness-tracker/FitnessTrackerGUI/Views/ActivityView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/egede/Desktop/jobs/fitness_tracker_gui/fitness-tracker/FitnessTrackerGUI/Views/GoalView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

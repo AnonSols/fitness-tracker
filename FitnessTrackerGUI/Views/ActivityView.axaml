@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.ActivityView" x:DataType="vm:ActivityViewModel">
+    <Panel>
+        <StackPanel Margin="30" Spacing="20">
+            <TextBlock Text="Log an Activity" FontSize="24" FontWeight="Bold"/><!-- Activity Type -->
+            <ComboBox ItemsSource="{Binding ActivityTypes}" SelectedItem="{Binding SelectedActivityType}">
+                <ComboBox.PlaceholderText>Choose activity type</ComboBox.PlaceholderText>
+            </ComboBox><!-- Steps -->
+            <TextBox Watermark="Steps" Text="{Binding Steps}" IsVisible="{Binding ShowSteps}"/><!-- Distance (km) -->
+            <TextBox Watermark="Distance (km)" Text="{Binding DistanceKm}" IsVisible="{Binding ShowDistance}"/><!-- Duration (minutes) -->
+            <TextBox Watermark="Duration (min)" Text="{Binding DurationMinutes}" IsVisible="{Binding ShowDuration}"/><!-- Elevation Gain -->
+            <TextBox Watermark="Elevation Gain (m)" Text="{Binding ElevationGain}" IsVisible="{Binding ShowElevation}"/><!-- Calories -->
+            <TextBlock Text="{Binding CaloriesText}" FontWeight="Bold"/><!-- Save Button -->
+            <Button Content="Log Activity" Command="{Binding LogActivityCommand}" Classes="Primary"/><!-- Activity Log -->
+            <TextBlock Text="Activity History:" FontWeight="Bold" Margin="0,20,0,0"/>
+            <ItemsControl ItemsSource="{Binding LoggedActivities}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Panel>
+</UserControl>
