@@ -11,6 +11,7 @@ namespace FitnessTrackerGUI;
 
 public partial class App : Application
 {
+    public static MainWindowViewModel MainViewModel { get; private set; } = null!;
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -18,14 +19,17 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        MainViewModel = new MainWindowViewModel();
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             // Avoid duplicate validations from both Avalonia and the CommunityToolkit. 
             // More info: https://docs.avaloniaui.net/docs/guides/development-guides/data-validation#manage-validationplugins
             DisableAvaloniaDataAnnotationValidation();
+
+
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = MainViewModel,
             };
         }
 
@@ -44,4 +48,6 @@ public partial class App : Application
             BindingPlugins.DataValidators.Remove(plugin);
         }
     }
+
+
 }

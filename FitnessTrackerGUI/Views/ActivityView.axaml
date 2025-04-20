@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.ActivityView" x:DataType="vm:ActivityViewModel">
+    <Panel>
+        <StackPanel Margin="30" Spacing="20" HorizontalAlignment="Center" Width="400"><!-- Title -->
+            <TextBlock Text="Log an Activity" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center"/><!-- Activity Type -->
+            <ComboBox ItemsSource="{Binding ActivityTypes}" SelectedItem="{Binding SelectedActivityType}" PlaceholderText="Choose activity type"/><!-- Conditional Inputs -->
+            <TextBox Watermark="Steps" Text="{Binding Steps}" IsVisible="{Binding ShowSteps}"/>
+            <TextBox Watermark="Distance (km)" Text="{Binding DistanceKm}" IsVisible="{Binding ShowDistance}"/>
+            <TextBox Watermark="Duration (min)" Text="{Binding DurationMinutes}" IsVisible="{Binding ShowDuration}"/>
+            <TextBox Watermark="Elevation Gain (m)" Text="{Binding ElevationGain}" IsVisible="{Binding ShowElevation}"/><!-- Calories Output -->
+            <TextBlock Text="{Binding CaloriesText}" FontSize="18" FontWeight="Bold" Foreground="#10B981" HorizontalAlignment="Center"/><!-- Action Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10" Margin="0,10,0,0">
+                <Button Content="Log Activity" Command="{Binding LogActivityCommand}" Classes="Primary" Width="150"/>
+                <Button Content="Back to Dashboard" Command="{Binding BackToDashboardCommand}" Classes="TextButton" Width="150"/>
+            </StackPanel><!-- Activity History -->
+            <TextBlock Text="Activity History" FontWeight="Bold" FontSize="16" Margin="0,20,0,0"/>
+            <ItemsControl ItemsSource="{Binding ActivityLogs}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#cccc" CornerRadius="5" Padding="8" Margin="0,5,0,0">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Timestamp}" FontSize="12" Foreground="#6B7280"/>
+                                <TextBlock Text="{Binding ActivityType}" FontWeight="Bold" FontSize="14"/>
+                                <TextBlock Text="{Binding CaloriesBurned, StringFormat=&apos;{}{0:F1} kcal&apos;}" FontSize="12"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Panel>
+</UserControl>

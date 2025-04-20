@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.LoginView" x:DataType="vm:LoginViewModel">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="350" Spacing="20">
+            <TextBlock Text="Welcome Back" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBox Watermark="Username" Text="{Binding Username}"/>
+            <TextBox PasswordChar="•" Watermark="Password" Text="{Binding Password}"/>
+            <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" FontWeight="Bold" FontSize="12" TextWrapping="Wrap"/>
+            <Button Content="Sign In" Command="{Binding LoginCommand}" Classes="Primary"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                <TextBlock Text="Don&apos;t have an account?"/>
+                <Button Content="Create Account" Command="{Binding NavigateToRegisterCommand}" Classes="TextButton"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
