@@ -1,10 +1,18 @@
-<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" x:Class="FitnessTrackerGUI.Views.RegisterView" x:DataType="vm:RegisterViewModel">
-    <StackPanel Spacing="15" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text="Register" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
-        <TextBox Watermark="Username" Text="{Binding Username}" Width="250"/>
-        <TextBox Watermark="Password" PasswordChar="●" Text="{Binding Password}" Width="250"/>
-        <TextBox Watermark="Confirm Password" PasswordChar="●" Text="{Binding ConfirmPassword}" Width="250"/>
-        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" HorizontalAlignment="Center"/>
-        <Button Content="Register" Command="{Binding RegisterCommand}" Width="250"/>
-    </StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:FitnessTrackerGUI.ViewModels" xmlns:converters="clr-namespace:Avalonia.Data.Converters;assembly=Avalonia.Base" x:Class="FitnessTrackerGUI.Views.RegisterView" x:DataType="vm:RegisterViewModel">
+    <Panel>
+        <StackPanel Width="350" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20" Margin="40"><!-- Header -->
+            <TextBlock Text="Create Account" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#1E3A8A"/><!-- Input Fields -->
+            <TextBox Watermark="Username" Text="{Binding Username}" Classes="ModernInput"/><!-- Use regular TextBox with PasswordChar -->
+            <TextBox Watermark="Password" Text="{Binding Password}" Classes="ModernInput" PasswordChar="•"/>
+            <TextBox Watermark="Confirm Password" Text="{Binding ConfirmPassword}" Classes="ModernInput" PasswordChar="•"/><!-- Error Message -->
+            <Border Background="#FEE2E2" CornerRadius="5" IsVisible="{Binding ErrorMessage, Converter={x:Static converters:StringConverters.IsNotNullOrEmpty}}" Padding="10">
+                <TextBlock Text="{Binding ErrorMessage}" Foreground="#B91C1C" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+            </Border><!-- Register Button -->
+            <Button Content="Register" Command="{Binding RegisterCommand}" Classes="Primary" HorizontalContentAlignment="Center"/><!-- Login Redirect -->
+            <StackPanel HorizontalAlignment="Center" Spacing="4">
+                <TextBlock Text="Already have an account?" Foreground="Gray"/>
+                <Button Content="Back to Login" Command="{Binding NavigateToLoginCommand}" Classes="TextButton"/>
+            </StackPanel>
+        </StackPanel>
+    </Panel>
 </UserControl>

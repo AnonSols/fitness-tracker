@@ -2,7 +2,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FitnessTrackerGUI.Services;
 using FitnessTrackerGUI.Views;
-using FitnessTrackerGUI.Helpers; 
+using FitnessTrackerGUI.Helpers;
 
 namespace FitnessTrackerGUI.ViewModels;
 
@@ -29,15 +29,15 @@ public partial class RegisterViewModel : ObservableObject
             return;
         }
 
-        if (!ValidationHelper.IsValidPassword(Password))
-{
-    ErrorMessage = "Password must be 12 characters with 1 uppercase and 1 lowercase letter.";
-    return;
-}
-
         if (Password != ConfirmPassword)
         {
             ErrorMessage = "Passwords do not match.";
+            return;
+        }
+
+        if (!ValidationHelper.IsValidPassword(Password))
+        {
+            ErrorMessage = "Password must be 12 characters with 1 uppercase and 1 lowercase.";
             return;
         }
 
@@ -49,6 +49,12 @@ public partial class RegisterViewModel : ObservableObject
 
         UserService.Register(Username, Password);
         ErrorMessage = "Registration successful!";
-        App.MainViewModel.CurrentView = new LoginView(); // Optional auto-redirect
+        App.MainViewModel.CurrentView = new LoginView(); // Go to login after register
+    }
+
+    [RelayCommand]
+    private void NavigateToLogin()
+    {
+        App.MainViewModel.CurrentView = new LoginView();
     }
 }
