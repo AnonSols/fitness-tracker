@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitnessTrackerGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0556509fac9274fd303568ea2306838a9284b68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64055382079a8e55218e1e8240166df6e2093e2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitnessTrackerGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitnessTrackerGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

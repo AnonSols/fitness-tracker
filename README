@@ -1,76 +1,128 @@
-# Fitness Tracker App
+# Fitness Tracker GUI Application
 
-**NCC Education Assignment** | [![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/) [![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+## 📌 Overview
 
-A GUI-based fitness tracker application built with C# and WPF, fulfilling the NCC Education assignment requirements for _Designing and Developing Object-Oriented Computer Programs_.
-
----
-
-## 📌 Features
-
-✅ **User Authentication**
-
-- Registration with username (alphanumeric) and password (12 chars, 1 uppercase, 1 lowercase).
-- Login with attempt handling.
-
-✅ **Activity Tracking**
-
-- Log 6 activity types:
-  - 🚶 Walking (steps, distance)
-  - 🏊 Swimming (laps, heart rate)
-  - 🏃 Running (distance, elevation)
-  - 🚴 Cycling (distance, speed)
-  - 🧘 Yoga (duration, style)
-  - 💪 Weightlifting (sets, reps)
-
-✅ **Goal Monitoring**
-
-- Set daily calorie goals.
-- Track progress with real-time calculations.
-
-✅ **Validation**
-
-- Reject invalid inputs (negative numbers, incorrect formats).
+This is a cross-platform fitness tracking application built using **C# with Avalonia UI**. It allows users to register, log in, set daily fitness goals, and track physical activities such as walking, running, yoga, and more—all through an intuitive and interactive user interface.
 
 ---
 
-## 🛠️ Technical Stack
+## 🚀 Features
 
-- **Language**: C#
-- **Framework**: .NET 6+
-- **GUI**: WPF (MVVM pattern)
-- **Backend**: OOP principles (encapsulation, inheritance, polymorphism)
+- **User Registration & Login**
+
+  - Username and password validation
+  - Data persistence during runtime
+
+- **Goal Tracking**
+
+  - Input daily calorie and step goals
+  - Data is used for progress tracking
+
+- **Activity Logging**
+
+  - Select activity type (e.g., Running, Yoga)
+  - Log attributes like steps, distance, time
+  - Calculates calories burned
+  - Stores a history of all activity logs
+
+- **Dashboard**
+
+  - View welcome message
+  - Calorie goal vs. calories burned
+  - Recent activity breakdown (visual + textual)
+
+- **Analytics Summary**
+
+  - Aggregates calories burned
+  - Activity-based breakdown
+  - Timestamp of recent logs
+
+- **Navigation**
+  - Move between Login, Register, Dashboard, GoalView, ActivityView
 
 ---
 
-## 📂 Project Structure
+## 🧰 Technologies Used
 
-FitnessTrackerApp/
-├── Models/ # Data structures
-│ ├── Activity.cs # Base class
-│ └── Activities/ # Walking, Swimming, etc.
-├── Services/ # Business logic
-│ ├── UserService.cs # Authentication
-│ └── WorkoutService.cs # Activity logging
-├── Helpers/ # Utilities
-│ ├── ValidationHelper.cs
-│ └── WorkoutHelpers/ # Activity-specific logic
-├── GUI/ # WPF project (to be implemented)
-└── README.md # This file
+- **C# .NET 9**
+- **Avalonia UI**
+- **MVVM Toolkit (CommunityToolkit.Mvvm)**
+- **Observable Properties & Commands**
+- **Visual Studio Code + CLI**
+- **XAML for UI Layouts**
 
 ---
 
-## 🚀 Getting Started
+## 🔧 Getting Started
 
 ### Prerequisites
 
-- [.NET 6 SDK](https://dotnet.microsoft.com/download)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) (or VS Code with C# extension)
+- .NET 9 SDK
+- Avalonia Extension (for XAML preview in IDE)
+- Visual Studio Code or Visual Studio
 
-### Running the Console MVP
+### Setup Instructions
 
-```bash
-git clone https://github.com/anonsols/fitness-tracker.git
-cd fitness-tracker/FitnessTrackerApp
-dotnet run
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/AnonSols/fitness-tracker.git
+   ```
+
+2. Navigate to the project:
+
+   ```bash
+   cd fitness-tracker-gui/FitnessTrackerGUI
+   ```
+
+3. Restore and build:
+
+   ```bash
+   dotnet restore
+   dotnet build
+   ```
+
+4. Run the application:
+   ```bash
+   dotnet run
+   ```
+
+---
+
+## 📂 Folder Structure
+
+```
+FitnessTrackerGUI/
+│
+├── Views/               # XAML UI files for all views
+├── ViewModels/          # ViewModels for logic and state binding
+├── Services/            # Utility services like UserService, AnalyticsService
+├── Helpers/             # Validation helpers
+├── Models/              # Models for analytics data
+├── App.axaml            # Application styling and theme
+└── Program.cs           # Entry point
+```
+
+---
+
+## 📸 Screenshots
+
+> See `/screenshots/` folder or project documentation for login, dashboard, and activity flow UI previews.
+
+---
+
+## 🧠 Author
+
+- **Egede Ubeath Solomon**
+- Developed as part of a hands-on .NET assignment for learning GUI and MVVM with Avalonia.
+
+---
+
+## 📃 License
+
+This project is for educational purposes only.
+
+```
+
+---
 ```
